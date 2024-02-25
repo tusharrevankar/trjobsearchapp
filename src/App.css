@@ -1,0 +1,11 @@
+.gradient-bg {
+  background: linear-gradient(to bottom, #83c0df, #75f094); /* Paper Grey colors */
+}
+
+.card-container {
+  margin-top: 20px; /* Adjust the spacing as needed */
+}
+
+.dropdown-container {
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}

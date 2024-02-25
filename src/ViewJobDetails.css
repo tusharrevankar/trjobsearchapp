@@ -1,0 +1,114 @@
+/* General Styles */
+/* ViewJobDetails.css */
+
+/* Import Nunito Sans font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+
+/* Apply Nunito Sans font to body */
+body {
+  font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Job Details Styles */
+  .job-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Title and Location Section */
+  .title-section {
+    background-color: #0973f8;
+    padding: 30px 470px;
+    color: white;
+  }
+  
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .job-title {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .location {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .location-icon {
+    margin-right: 10px;
+    font-size: 24px;
+  }
+  
+  /* Job Content Section */
+  .job-content {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .info-section {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    margin-bottom: 20px;
+  }
+  
+  .posted-date,
+  .location-info,
+  .positions {
+    font-size: 18px;
+    margin-right: 20px; /* Add space between items */
+  }
+  
+  /* Button Styles */
+  a {
+    text-decoration: none;
+    background-color: #0973f8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  a:hover {
+    background-color: #0973f8;
+  }
+  
+  /* Add padding to each social icon */
+.social-icons a {
+    margin-right: 10px; /* Adjust the spacing as needed */
+    text-decoration: none;
+  }
+  
+
+  /* Styles for the ads section */
+.ads-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .ad-job {
+    margin-bottom: 15px;
+  }
+  
+  .ad-job-title {
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .ad-job-location {
+    color: #777;
+  }
+  
