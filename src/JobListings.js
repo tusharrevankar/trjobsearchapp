@@ -3,12 +3,12 @@ import './JobListings.css';
 import './App.css';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
-import { Dropdown } from 'primereact/dropdown'; 
+import { Dropdown } from 'primereact/dropdown';
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import { Skeleton } from 'primereact/skeleton';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 
 
@@ -17,13 +17,13 @@ const JobListings = () => {
   const [loading, setLoading] = useState(true);
   const [expandedJobIds, setExpandedJobIds] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedLocation, setSelectedLocation] = useState(null); 
-  const [locations, setLocations] = useState([]); 
-  const [departments, setDepartments] = useState([]); 
-  const [selectedDepartment, setSelectedDepartment] = useState(null); 
-  const [selectedFunction, setSelectedFunction] = useState(null); 
-  const [functions, setFunctions] = useState([]); 
-  const [skeletonLoading, setSkeletonLoading] = useState(true); 
+  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [locations, setLocations] = useState([]);
+  const [departments, setDepartments] = useState([]);
+  const [selectedDepartment, setSelectedDepartment] = useState(null);
+  const [selectedFunction, setSelectedFunction] = useState(null);
+  const [functions, setFunctions] = useState([]);
+  const [skeletonLoading, setSkeletonLoading] = useState(true);
 
   useEffect(() => {
     fetch('https://demo.jobsoid.com/api/v1/jobs')
@@ -71,7 +71,7 @@ const JobListings = () => {
     const savedDepartment = JSON.parse(localStorage.getItem('selectedDepartment'));
     const savedFunction = JSON.parse(localStorage.getItem('selectedFunction'));
 
-    
+
     setSearchQuery(savedSearchQuery || '');
     setSelectedLocation(savedLocation || null);
     setSelectedDepartment(savedDepartment || null);
@@ -138,7 +138,7 @@ const JobListings = () => {
     <div>
       <div className="a" style={{ backgroundColor: 'rgb(237,241,255)' }}>
 
-      <nav  style={{ backgroundColor: 'rgb(237,241,255) !important', backgroundImage: 'none' }}>
+        <nav style={{ backgroundColor: 'rgba(0,0,0,0)'}}>
           <div className="nav-wrapper">
             <i className="material-icons left" style={{ backgroundColor: '#0973f8' }}>Tushar Revankar</i> {/* Work icon */}
           </div>
@@ -167,7 +167,7 @@ const JobListings = () => {
               placeholder="Select a location , country , state "
               onChange={handleLocationChange}
               className="location-dropdown"
-              style={{ width: '96%' }} 
+              style={{ width: '96%' }}
             />
             {selectedLocation && (
               <Button
@@ -186,7 +186,7 @@ const JobListings = () => {
               optionLabel="title"
               placeholder="Select a department"
               onChange={handleDepartmentChange}
-              style={{ width: '96%' }} 
+              style={{ width: '96%' }}
             />
             {selectedDepartment && (
               <Button
@@ -205,18 +205,18 @@ const JobListings = () => {
               optionLabel="title"
               placeholder="Select a function"
               onChange={handleFunctionChange}
-              style={{ width: '96%' }} 
+              style={{ width: '96%' }}
             />
             {selectedFunction && (
               <Button
                 className="p-button-secondary clear-button"
                 icon="pi pi-times"
                 onClick={() => setSelectedFunction(null)}
-                style={{ height: '40px' }} 
+                style={{ height: '40px' }}
               />
             )}
           </div>
-         
+
           <div className="card-container">
             <div className="p-grid p-col-gap">
               {loading ? (
